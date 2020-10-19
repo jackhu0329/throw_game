@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: eb904c34463b2f2469b002c6081b8639
+timeCreated: 1551117977
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Bowl_Glass1
+    100002: Bowl_Glass2
+    100004: Bowl_Type1
+    100006: Bowl_Type2
+    100008: ButterKnife
+    100010: choppingBoard
+    100012: CoffeeCup
+    100014: CoffeeCup_Saucer
+    100016: CupRegular
+    100018: Fork
+    100020: Glass_Beer1
+    100022: Glass_Beer2
+    100024: Glass_Martini
+    100026: Glass_Type1
+    100028: Glass_Type2
+    100030: Glass_Type3
+    100032: Kettle
+    100034: Kettle_Cap
+    100036: //RootNode
+    100038: Knife
+    100040: Pan1
+    100042: Pan1_Top
+    100044: Pan2
+    100046: Pan3
+    100048: Pan_Old
+    100050: Plate
+    100052: Pot
+    100054: Pot2
+    100056: Pot2_Top
+    100058: Pot3
+    100060: Pot3_Top
+    100062: Scoop
+    100064: Scoop_Large
+    100066: Soviet glass
+    100068: Spatula
+    100070: Spoon
+    100072: Wine Glass
+    100074: Wine Glass Tall
+    100076: Circle
+    100078: CutleryHolder
+    100080: PlateHolder
+    400000: Bowl_Glass1
+    400002: Bowl_Glass2
+    400004: Bowl_Type1
+    400006: Bowl_Type2
+    400008: ButterKnife
+    400010: choppingBoard
+    400012: CoffeeCup
+    400014: CoffeeCup_Saucer
+    400016: CupRegular
+    400018: Fork
+    400020: Glass_Beer1
+    400022: Glass_Beer2
+    400024: Glass_Martini
+    400026: Glass_Type1
+    400028: Glass_Type2
+    400030: Glass_Type3
+    400032: Kettle
+    400034: Kettle_Cap
+    400036: //RootNode
+    400038: Knife
+    400040: Pan1
+    400042: Pan1_Top
+    400044: Pan2
+    400046: Pan3
+    400048: Pan_Old
+    400050: Plate
+    400052: Pot
+    400054: Pot2
+    400056: Pot2_Top
+    400058: Pot3
+    400060: Pot3_Top
+    400062: Scoop
+    400064: Scoop_Large
+    400066: Soviet glass
+    400068: Spatula
+    400070: Spoon
+    400072: Wine Glass
+    400074: Wine Glass Tall
+    400076: Circle
+    400078: CutleryHolder
+    400080: PlateHolder
+    2300000: Bowl_Glass1
+    2300002: Bowl_Glass2
+    2300004: Bowl_Type1
+    2300006: Bowl_Type2
+    2300008: ButterKnife
+    2300010: choppingBoard
+    2300012: CoffeeCup
+    2300014: CoffeeCup_Saucer
+    2300016: CupRegular
+    2300018: Fork
+    2300020: Glass_Beer1
+    2300022: Glass_Beer2
+    2300024: Glass_Martini
+    2300026: Glass_Type1
+    2300028: Glass_Type2
+    2300030: Glass_Type3
+    2300032: Kettle
+    2300034: Kettle_Cap
+    2300036: Knife
+    2300038: Pan1
+    2300040: Pan1_Top
+    2300042: Pan2
+    2300044: Pan3
+    2300046: Pan_Old
+    2300048: Plate
+    2300050: Pot
+    2300052: Pot2
+    2300054: Pot2_Top
+    2300056: Pot3
+    2300058: Pot3_Top
+    2300060: Scoop
+    2300062: Scoop_Large
+    2300064: Soviet glass
+    2300066: Spatula
+    2300068: Spoon
+    2300070: Wine Glass
+    2300072: Wine Glass Tall
+    2300074: Circle
+    2300076: CutleryHolder
+    2300078: PlateHolder
+    3300000: Bowl_Glass1
+    3300002: Bowl_Glass2
+    3300004: Bowl_Type1
+    3300006: Bowl_Type2
+    3300008: ButterKnife
+    3300010: choppingBoard
+    3300012: CoffeeCup
+    3300014: CoffeeCup_Saucer
+    3300016: CupRegular
+    3300018: Fork
+    3300020: Glass_Beer1
+    3300022: Glass_Beer2
+    3300024: Glass_Martini
+    3300026: Glass_Type1
+    3300028: Glass_Type2
+    3300030: Glass_Type3
+    3300032: Kettle
+    3300034: Kettle_Cap
+    3300036: Knife
+    3300038: Pan1
+    3300040: Pan1_Top
+    3300042: Pan2
+    3300044: Pan3
+    3300046: Pan_Old
+    3300048: Plate
+    3300050: Pot
+    3300052: Pot2
+    3300054: Pot2_Top
+    3300056: Pot3
+    3300058: Pot3_Top
+    3300060: Scoop
+    3300062: Scoop_Large
+    3300064: Soviet glass
+    3300066: Spatula
+    3300068: Spoon
+    3300070: Wine Glass
+    3300072: Wine Glass Tall
+    3300074: Circle
+    3300076: CutleryHolder
+    3300078: PlateHolder
+    4300000: Plate
+    4300002: Wine Glass Tall
+    4300004: Wine Glass
+    4300006: Pot2
+    4300008: Pot2_Top
+    4300010: Scoop
+    4300012: Pot
+    4300014: Pot3
+    4300016: Pot3_Top
+    4300018: Scoop_Large
+    4300020: Spatula
+    4300022: Kettle
+    4300024: Kettle_Cap
+    4300026: Pan1
+    4300028: Pan1_Top
+    4300030: Pan2
+    4300032: Pan_Old
+    4300034: Bowl_Glass2
+    4300036: Bowl_Glass1
+    4300038: Bowl_Type2
+    4300040: Glass_Beer2
+    4300042: Glass_Beer1
+    4300044: Glass_Type3
+    4300046: Glass_Martini
+    4300048: Glass_Type1
+    4300050: Glass_Type2
+    4300052: CoffeeCup_Saucer
+    4300054: CoffeeCup
+    4300056: Soviet glass
+    4300058: choppingBoard
+    4300060: Spoon
+    4300062: Knife
+    4300064: Pan3
+    4300066: CupRegular
+    4300068: Bowl_Type1
+    4300070: ButterKnife
+    4300072: Fork
+    4300074: CutleryHolder
+    4300076: Circle
+    4300078: PlateHolder
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.8
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

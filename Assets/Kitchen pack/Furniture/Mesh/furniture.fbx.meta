@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: 012fcaea1338d854da7b048319e47142
+timeCreated: 1551197027
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Chair
+    100002: Fridge
+    100004: //RootNode
+    100006: Kitchen_Cabinet
+    100008: Kitchen_Cabinet.Corner
+    100010: Kitchen_Cabinet.Sink
+    100012: Kitchen_Cabinet.Top
+    100014: Microwave
+    100016: Oven
+    100018: Shelf
+    100020: Table
+    100022: ToolHanger
+    100024: Vent
+    400000: Chair
+    400002: Fridge
+    400004: //RootNode
+    400006: Kitchen_Cabinet
+    400008: Kitchen_Cabinet.Corner
+    400010: Kitchen_Cabinet.Sink
+    400012: Kitchen_Cabinet.Top
+    400014: Microwave
+    400016: Oven
+    400018: Shelf
+    400020: Table
+    400022: ToolHanger
+    400024: Vent
+    2300000: Chair
+    2300002: Fridge
+    2300004: Kitchen_Cabinet
+    2300006: Kitchen_Cabinet.Corner
+    2300008: Kitchen_Cabinet.Sink
+    2300010: Kitchen_Cabinet.Top
+    2300012: Microwave
+    2300014: Oven
+    2300016: Shelf
+    2300018: Table
+    2300020: ToolHanger
+    2300022: Vent
+    3300000: Chair
+    3300002: Fridge
+    3300004: Kitchen_Cabinet
+    3300006: Kitchen_Cabinet.Corner
+    3300008: Kitchen_Cabinet.Sink
+    3300010: Kitchen_Cabinet.Top
+    3300012: Microwave
+    3300014: Oven
+    3300016: Shelf
+    3300018: Table
+    3300020: ToolHanger
+    3300022: Vent
+    4300000: Chair
+    4300002: Table
+    4300004: Shelf
+    4300006: ToolHanger
+    4300008: Vent
+    4300010: Kitchen_Cabinet.Corner
+    4300012: Microwave
+    4300014: Kitchen_Cabinet.Top
+    4300016: Fridge
+    4300018: Kitchen_Cabinet.Sink
+    4300020: Kitchen_Cabinet
+    4300022: Oven
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
