@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
+using HTC.UnityPlugin.Vive;
 
 public class hand : MonoBehaviour
 {
@@ -23,11 +24,27 @@ public class hand : MonoBehaviour
         mJoint = GetComponent<FixedJoint>();
     }
 
+    void Spawn()
+    {
+        GameEventCenter.DispatchEvent("SpawnCup");
+    }
     // Update is called once per frame
     void Update()
     {
 
+        if (ViveInput.GetPressDown(HandRole.RightHand, ControllerButton.Menu))
+        {
+            if (mGrabAction.GetStateDown(mPose.inputSource))
+            {
+                Spawn();
+            }
+        }
 
+        //按下Left Menu時觸發
+        if (ViveInput.GetPressDown(HandRole.LeftHand, ControllerButton.Menu))
+        {
+            
+        }
 
         if (mGrabAction.GetStateDown(mPose.inputSource))
         {
@@ -44,13 +61,14 @@ public class hand : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        Debug.Log("touch1");
         if (!other.gameObject.CompareTag("Interactable"))
         {
             return;
         }
         else if (other.gameObject.CompareTag("Interactable"))
         {
+            Debug.Log("touch2");
             mContactInteractables.Add(other.gameObject.GetComponent<Interactable>());
         }
 
@@ -59,13 +77,9 @@ public class hand : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.gameObject.CompareTag("Interactable") || !other.gameObject.CompareTag("PickUpArea"))
+        if (!other.gameObject.CompareTag("Interactable"))
         {
             return;
-        }
-        if (other.gameObject.CompareTag("PickUpArea"))
-        {
-            other.transform.GetChild(2).gameObject.SetActive(false);
         }
         else if (other.gameObject.CompareTag("Interactable"))
         {
@@ -75,14 +89,15 @@ public class hand : MonoBehaviour
 
     private void Pickup()
     {
-        mCurrentInteractable = GetNearestInteractable();
 
+        mCurrentInteractable = GetNearestInteractable();
+        Debug.Log("pick1");
         if (!mCurrentInteractable)
             return;
 
         if (mCurrentInteractable.mActiveHand)
             mCurrentInteractable.mActiveHand.Drop();
-
+        Debug.Log("pick2");
         //mCurrentInteractable.transform.position =new Vector3(transform.position.x - 0.2f, transform.position.y-0.2f, transform.position.z);
         //mCurrentInteractable.transform.eulerAngles = new Vector3(transform.rotation.x , 0 , -90);
 
@@ -104,8 +119,10 @@ public class hand : MonoBehaviour
         mCurrentInteractable.transform.rotation = originRotation;*/
 
         Rigidbody targetBody = mCurrentInteractable.GetComponent<Rigidbody>();
-        targetBody.velocity = mPose.GetVelocity();
-        targetBody.angularVelocity = mPose.GetAngularVelocity();
+        //targetBody.velocity = mPose.GetVelocity()*10;
+        targetBody.velocity = new Vector3(mPose.GetVelocity().z * 10, mPose.GetVelocity().y * 10,- mPose.GetVelocity().x * 10);
+
+        targetBody.angularVelocity = mPose.GetAngularVelocity()*10;
 
 
         mContactInteractables = new List<Interactable>();
@@ -121,14 +138,21 @@ public class hand : MonoBehaviour
         Interactable nearest = null;
         float minDistance = float.MaxValue;
         float distance = 0.0f;
-
+        Debug.Log("GetNearestInteractable1");
         foreach (Interactable interactive in mContactInteractables)
         {
             distance = (interactive.transform.position - transform.position).sqrMagnitude;
-
-            if (distance < minDistance && distance < 0.1f && interactive.tag == ("Interactable"))//手把真的有碰到物體 且物體還是可以動的狀態
+            Debug.Log("GetNearestInteractable2:"+ interactive.name);
+            /*if (distance < minDistance && distance < 0.1f && interactive.tag == ("Interactable"))//手把真的有碰到物體 且物體還是可以動的狀態
             {
                 minDistance = distance;
+                nearest = interactive;
+
+            }*/
+
+            if ( interactive.tag == ("Interactable"))//手把真的有碰到物體 且物體還是可以動的狀態
+            {
+                Debug.Log("GetNearestInteractable3:" + interactive.name);
                 nearest = interactive;
 
             }

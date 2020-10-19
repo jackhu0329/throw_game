@@ -22,10 +22,14 @@ namespace GameFrame
 
         public void OnTriggerEnter(Collider other)
         {
-            Debug.Log("test"+other.name);
-            GameEventCenter.DispatchEvent("GetScore");
-            GameEventCenter.DispatchEvent("SpawnCup");
-            Destroy(this.gameObject);
+            if(other.name == "TrashbinGreen")
+            {
+                Debug.Log("test" + other.name);
+                GameEventCenter.DispatchEvent("GetScore");
+                GameEventCenter.DispatchEvent("SpawnCup");
+                Destroy(this.gameObject);
+            }
+
         }
 
         public void OnTriggerExit(Collider other)
