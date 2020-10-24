@@ -6,8 +6,10 @@ namespace GameFrame
 {
     public class CupEntity : GameEntityBase
     {
+        private ParticleSystem particleObj;
         public void Awake()
         {
+            particleObj = gameObject.GetComponentInChildren<ParticleSystem>();
             Debug.Log("gravity");
             Physics.gravity = new Vector3(0, -20, 0);
         }
@@ -28,6 +30,7 @@ namespace GameFrame
                 Debug.Log("test" + other.name);
                 GameEventCenter.DispatchEvent("GetScore");
                 GameEventCenter.DispatchEvent("SpawnCup");
+                GameEventCenter.DispatchEvent("ParticleStart");
                 Destroy(this.gameObject);
             }
 
