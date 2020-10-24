@@ -8,7 +8,8 @@ namespace GameFrame
     {
         public void Awake()
         {
-
+            Debug.Log("gravity");
+            Physics.gravity = new Vector3(0, -20, 0);
         }
         public override void EntityDispose()
         {
