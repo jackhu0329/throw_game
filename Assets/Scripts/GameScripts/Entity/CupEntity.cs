@@ -25,6 +25,11 @@ namespace GameFrame
 
         public void OnTriggerEnter(Collider other)
         {
+            if (other.CompareTag("Hand"))
+            {
+                return;
+            }
+
             //Debug.Log(other.name);
             if(other.name == "TrashbinGreen")
             {
@@ -34,13 +39,13 @@ namespace GameFrame
                 GameEventCenter.DispatchEvent("ParticleStart");
                 Destroy(this.gameObject);
             }
-            else
+            else 
             {
                 GameEventCenter.DispatchEvent("SpawnCup");
                 GameEventCenter.DispatchEvent("MotionFailed");
                 Destroy(this.gameObject);
             }
-
+            Destroy(this.gameObject);
         }
 
         public void OnTriggerExit(Collider other)

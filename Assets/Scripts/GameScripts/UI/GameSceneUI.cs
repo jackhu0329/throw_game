@@ -34,6 +34,14 @@ public class GameSceneUI : MonoBehaviour
             GameEventCenter.DispatchEvent("MotionFailed");
         }
 
+        if(failCount == 3)
+        {
+            UI = false;
+            TimerEnd();
+            time.text = "花費時間:" + Mathf.FloorToInt(timer);
+            transform.GetComponent<Canvas>().transform.GetChild(0).gameObject.SetActive(true);
+        }
+
         if (score == 5)
         {
             UI = false;
@@ -47,7 +55,7 @@ public class GameSceneUI : MonoBehaviour
     {
         GUIStyle gameUI = new GUIStyle();
         gameUI.normal.textColor = new Color(255, 255, 255);
-        gameUI.fontSize = 30;
+        gameUI.fontSize = 60;
         
         if (UI)
         {
