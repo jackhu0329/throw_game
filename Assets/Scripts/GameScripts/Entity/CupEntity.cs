@@ -25,12 +25,19 @@ namespace GameFrame
 
         public void OnTriggerEnter(Collider other)
         {
+            //Debug.Log(other.name);
             if(other.name == "TrashbinGreen")
             {
                 Debug.Log("test" + other.name);
                 GameEventCenter.DispatchEvent("GetScore");
                 GameEventCenter.DispatchEvent("SpawnCup");
                 GameEventCenter.DispatchEvent("ParticleStart");
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                GameEventCenter.DispatchEvent("SpawnCup");
+                GameEventCenter.DispatchEvent("MotionFailed");
                 Destroy(this.gameObject);
             }
 

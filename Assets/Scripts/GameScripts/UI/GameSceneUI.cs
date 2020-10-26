@@ -9,12 +9,14 @@ public class GameSceneUI : MonoBehaviour
     private float timer;
     private bool timerBool = true,UI=true;
     public Text time;
+    private int failCount = 0;
     // Start is called before the first frame update
     void Awake()
     {
         timer = 0;
         transform.GetComponent<Canvas>().transform.GetChild(0).gameObject.SetActive(false);
         GameEventCenter.AddEvent("GetScore", GetScore);
+        GameEventCenter.AddEvent("MotionFailed", MotionFailed);
         TimerStart();
     }
 
@@ -29,6 +31,7 @@ public class GameSceneUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             GameEventCenter.DispatchEvent("SpawnCup");
+            GameEventCenter.DispatchEvent("MotionFailed");
         }
 
         if (score == 5)
@@ -72,6 +75,12 @@ public class GameSceneUI : MonoBehaviour
             timerBool = false;
         }
         
+    }
+
+    private void MotionFailed()
+    {
+        failCount++;
+        transform.GetComponent<Canvas>().transform.GetChild(failCount).gameObject.SetActive(true);
     }
 
 

@@ -15,6 +15,8 @@ namespace GameFrame
 
         public GameEntityBase ThrowTarget;
 
+        public GameEntityBase FloatingText;
+
         public MainSceneUI mainSceneUI;
     }
 }

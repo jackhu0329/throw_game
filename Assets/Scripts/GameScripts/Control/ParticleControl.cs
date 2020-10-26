@@ -2,31 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleControl : MonoBehaviour
-{
-    private ParticleSystem particleObj;
-    private Vector3 objPosition;
-    // Start is called before the first frame update
-    void Start()
-    {
-        particleObj = gameObject.GetComponentInChildren<ParticleSystem>();
-        GameEventCenter.AddEvent("ParticleStart", ParticleStart);
-    }
 
-    // Update is called once per frame
-    void Update()
+namespace GameFrame
+{
+    public class ParticleControl : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        private ParticleSystem particleObj;
+        private GameObject FloatingText;
+        private Vector3 objPosition;
+        // Start is called before the first frame update
+        void Start()
         {
-            Debug.Log("particleObj");
+            FloatingText = GameEntityManager.Instance.GetCurrentSceneRes<MainSceneRes>().FloatingText.gameObject;
+            particleObj = gameObject.GetComponentInChildren<ParticleSystem>();
+            GameEventCenter.AddEvent("ParticleStart", ParticleStart);
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                GameObject.Instantiate(FloatingText, transform.position, Quaternion.identity);
+                Debug.Log("particleObj2");
+                particleObj.Play();
+            }
+        }
+
+        private void ParticleStart()
+        {
+            objPosition = GameObject.Find("CupRegular(Clone)").transform.position;
+            transform.position = objPosition;
+            GameObject.Instantiate(FloatingText, transform.position, Quaternion.identity);
             particleObj.Play();
         }
     }
-
-    private void ParticleStart()
-    {
-        objPosition = GameObject.Find("CupRegular(Clone)").transform.position;
-        transform.position = objPosition;
-        particleObj.Play();
-    }
 }
+
