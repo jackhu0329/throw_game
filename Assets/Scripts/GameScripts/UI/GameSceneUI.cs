@@ -9,6 +9,7 @@ public class GameSceneUI : MonoBehaviour
     private float timer;
     private bool timerBool = true,UI=true;
     public Text time;
+    public Text textScore;
     private int failCount = 0;
     // Start is called before the first frame update
     void Awake()
@@ -39,14 +40,16 @@ public class GameSceneUI : MonoBehaviour
             UI = false;
             TimerEnd();
             time.text = "花費時間:" + Mathf.FloorToInt(timer);
+            textScore.text = "任務完成數:" + score;
             transform.GetComponent<Canvas>().transform.GetChild(0).gameObject.SetActive(true);
         }
 
-        if (score == 5)
+        if (score == GameDataManager.FlowData.count)
         {
             UI = false;
             TimerEnd();
             time.text = "花費時間:" + Mathf.FloorToInt(timer);
+            textScore.text = "任務完成數:" + score;
             transform.GetComponent<Canvas>().transform.GetChild(0).gameObject.SetActive(true);
         }
     }

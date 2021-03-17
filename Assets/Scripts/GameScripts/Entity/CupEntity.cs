@@ -10,8 +10,9 @@ namespace GameFrame
         public void Awake()
         {
             particleObj = gameObject.GetComponentInChildren<ParticleSystem>();
-            Debug.Log("gravity");
-            Physics.gravity = new Vector3(0, -20, 0);
+            
+            Physics.gravity = new Vector3(0, -15-(GameDataManager.FlowData.mode*6), 0);
+            Debug.Log("gravity:"+ Physics.gravity);
         }
         public override void EntityDispose()
         {
