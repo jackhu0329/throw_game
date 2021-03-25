@@ -11,6 +11,7 @@ public class GameSceneUI : MonoBehaviour
     public Text time;
     public Text textScore;
     private int failCount = 0;
+    private bool hasCorrection = false;
     // Start is called before the first frame update
     void Awake()
     {
@@ -18,7 +19,7 @@ public class GameSceneUI : MonoBehaviour
         transform.GetComponent<Canvas>().transform.GetChild(0).gameObject.SetActive(false);
         GameEventCenter.AddEvent("GetScore", GetScore);
         GameEventCenter.AddEvent("MotionFailed", MotionFailed);
-        TimerStart();
+        GameEventCenter.AddEvent("CorrectionUI", CorrectionUI); 
     }
 
     // Update is called once per frame
@@ -57,13 +58,20 @@ public class GameSceneUI : MonoBehaviour
     private void OnGUI()
     {
         GUIStyle gameUI = new GUIStyle();
-        gameUI.normal.textColor = new Color(255, 255, 255);
+        gameUI.normal.textColor = new Color(0, 0, 0);
         gameUI.fontSize = 60;
-        
-        if (UI)
+        gameUI.fontStyle = FontStyle.Bold;
+
+        if (UI&& hasCorrection)
         {
             GUI.Label(new Rect(Screen.width / 10 * 1, (Screen.height / 6 * 5), 200, 100),
             "已完成" + score + "次"
+            , gameUI);
+        }
+        else if (UI)
+        {
+            GUI.Label(new Rect(Screen.width / 10 * 2, (Screen.height / 6 * 1), 200, 100),
+            "請伸直手臂並按住扳機鍵進行校正"
             , gameUI);
         }
 
@@ -88,6 +96,11 @@ public class GameSceneUI : MonoBehaviour
         
     }
 
+    private void CorrectionUI()
+    {
+        hasCorrection = true;
+        TimerStart();
+    }
     private void MotionFailed()
     {
         failCount++;

@@ -16,7 +16,8 @@ public class hand : MonoBehaviour
     private List<Interactable> mContactInteractables = new List<Interactable>();
 
     public int testHand;
-
+    private bool hasCorrection = false;
+    private float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,23 @@ public class hand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!hasCorrection)
+        {
+            if (ViveInput.GetPress(HandRole.RightHand, ControllerButton.Menu))
+            {
+                Debug.Log("CorrectionUI:" + timer);
+                timer += Time.deltaTime;
+                if (timer >= 2.0f && !hasCorrection)
+                {
+                    GameEventCenter.DispatchEvent<Vector3>("CameraCorrection", transform.position);
+                    GameEventCenter.DispatchEvent("CorrectionUI");
+                    hasCorrection = true;
+                    //Pickup();
+                }
+            }
+        }
+
+
 
         if (ViveInput.GetPressDown(HandRole.RightHand, ControllerButton.Menu))
         {
