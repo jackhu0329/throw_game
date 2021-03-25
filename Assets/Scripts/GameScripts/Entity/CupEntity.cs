@@ -11,7 +11,7 @@ namespace GameFrame
         {
             particleObj = gameObject.GetComponentInChildren<ParticleSystem>();
             
-            Physics.gravity = new Vector3(0, -15-(GameDataManager.FlowData.mode*6), 0);
+            Physics.gravity = new Vector3(0, -30-(GameDataManager.FlowData.mode*20), 0);
             Debug.Log("gravity:"+ Physics.gravity);
         }
         public override void EntityDispose()

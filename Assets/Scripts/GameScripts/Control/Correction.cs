@@ -32,7 +32,7 @@ public class Correction : MonoBehaviour
         correctionValueY = v.y - transform.position.y;
         correctionValueX = v.x - transform.position.x;
         correctionValueZ = v.z - transform.position.z;
-        camaraRig.transform.position = new Vector3(camaraRig.transform.position.x- correctionValueX, camaraRig.transform.position.y - correctionValueY, camaraRig.transform.position.z- correctionValueZ/2);
+        camaraRig.transform.position = new Vector3(camaraRig.transform.position.x- correctionValueX, camaraRig.transform.position.y - correctionValueY, camaraRig.transform.position.z- correctionValueZ);
         //hasCorrection = true;
     }
 }

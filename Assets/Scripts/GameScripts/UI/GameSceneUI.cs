@@ -71,7 +71,7 @@ public class GameSceneUI : MonoBehaviour
         else if (UI)
         {
             GUI.Label(new Rect(Screen.width / 10 * 2, (Screen.height / 6 * 1), 200, 100),
-            "請伸直手臂並按住扳機鍵進行校正"
+            "請伸直手臂並按住MENU鍵進行校正"
             , gameUI);
         }
 
