@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using GameFrame;
 public class GameSceneUI : MonoBehaviour
 {
     private int score = 0;
@@ -41,6 +41,7 @@ public class GameSceneUI : MonoBehaviour
             UI = false;
             TimerEnd();
             time.text = "花費時間:" + Mathf.FloorToInt(timer);
+            GameEventCenter.DispatchEvent<AudioSelect>("PlayAudio", AudioSelect.EndAudio);
             textScore.text = "任務完成數:" + score;
             transform.GetComponent<Canvas>().transform.GetChild(0).gameObject.SetActive(true);
         }
@@ -49,6 +50,7 @@ public class GameSceneUI : MonoBehaviour
         {
             UI = false;
             TimerEnd();
+
             time.text = "花費時間:" + Mathf.FloorToInt(timer);
             textScore.text = "任務完成數:" + score;
             transform.GetComponent<Canvas>().transform.GetChild(0).gameObject.SetActive(true);

@@ -38,12 +38,14 @@ namespace GameFrame
                 GameEventCenter.DispatchEvent("GetScore");
                 GameEventCenter.DispatchEvent("SpawnCup");
                 GameEventCenter.DispatchEvent("ParticleStart");
+                GameEventCenter.DispatchEvent<AudioSelect>("PlayAudio", AudioSelect.Success);
                 Destroy(this.gameObject);
             }
             else 
             {
                 GameEventCenter.DispatchEvent("SpawnCup");
                 GameEventCenter.DispatchEvent("MotionFailed");
+                GameEventCenter.DispatchEvent<AudioSelect>("PlayAudio", AudioSelect.fail);
                 Destroy(this.gameObject);
             }
             Destroy(this.gameObject);
